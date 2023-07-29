@@ -5,6 +5,7 @@ namespace Regex;
 class Pattern {
 	private const MONETARY_AMOUNT_WHOLE 	= '-?(?:0|[1-9]\d{3,}|[1-9]\d{0,2}(?:([,.])\d{3}(?:\1\d{3})*)?)';
 	const PATTERN_MONETARY_AMOUNT_STRICT 	= '/^'.self::MONETARY_AMOUNT_WHOLE.'[.,]\d{2}$/';
+	const PATTERN_MONETARY_AMOUNT_FLOAT 	= '/^'.self::MONETARY_AMOUNT_WHOLE.'(?:[.,]\d{1,})?$/';
 	const PATTERN_MONETARY_AMOUNT 			= '/^'.self::MONETARY_AMOUNT_WHOLE.'(?:[.,]\d{1,2})?$/';
 	
 	private const DATE_SEPARATOR 			= '[\-.\/]';
